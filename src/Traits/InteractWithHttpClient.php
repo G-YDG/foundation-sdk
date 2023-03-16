@@ -26,17 +26,17 @@ trait InteractWithHttpClient
         $this->httpClient = $httpClient;
     }
 
-    protected function createHttpClient(): ClientInterface
+    public function createHttpClient(): ClientInterface
     {
         return new Client($this->getHttpClientDefaultOptions());
     }
 
-    protected function getHttpClientDefaultOptions(): array
+    public function getHttpClientDefaultOptions(): array
     {
         return $this->defaultOptions;
     }
 
-    protected function setHttpClientDefaultOptions(array $defaultOptions)
+    public function setHttpClientDefaultOptions(array $defaultOptions)
     {
         $this->defaultOptions = $defaultOptions;
     }

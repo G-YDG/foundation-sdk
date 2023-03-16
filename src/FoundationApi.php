@@ -13,17 +13,23 @@ abstract class FoundationApi
      */
     protected $httpClient;
 
+    public function getHttpClient(): FoundationClient
+    {
+        if (is_null($this->httpClient)) {
+            $this->httpClient = new FoundationClient();
+            $this->httpClient->setHttpClientDefaultOptions($this->getHttpClientDefaultOptions());
+        }
+
+        return $this->httpClient;
+    }
+
     public function setHttpClient(FoundationClient $httpClient)
     {
         $this->httpClient = $httpClient;
     }
 
-    public function getHttpClient(): FoundationClient
+    protected function getHttpClientDefaultOptions(): array
     {
-        if (is_null($this->httpClient)) {
-            $this->httpClient = new FoundationClient();
-        }
-
-        return $this->httpClient;
+        return [];
     }
 }

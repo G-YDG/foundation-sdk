@@ -1,0 +1,41 @@
+{
+    "name": "ydg/foudation-sdk",
+    "description": "Easier to create a sdk",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "sdk",
+        "foudation",
+        "foudation-sdk"
+    ],
+    "require": {
+        "php": "^7.0|^8.0",
+        "pimple/pimple": "^3.0",
+        "guzzlehttp/guzzle": "^6.2|^7.0",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.12",
+        "phpunit/phpunit": "^9.5",
+        "vlucas/phpdotenv": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ydg\\FoudationSdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YdgTest\\FoudationSdk\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cs-fix": "php-cs-fixer fix ."
+    }
+}

@@ -9,7 +9,7 @@
         "foudation-sdk"
     ],
     "require": {
-        "php": "^7.0|^8.0",
+        "php": "^8.0",
         "pimple/pimple": "^3.0",
         "guzzlehttp/guzzle": "^6.2|^7.0",
         "ext-json": "*",
